@@ -13,6 +13,8 @@ rule read =
   | ":" { COLON }
   | "pre" { PRE }
   | "post" { POST }
-  | "surround" { SURROUND }
+  | "surround" { SURROUND } 
+  | "indentChild" { INDENTCHILD }
+  | "indentSelf" { INDENTSELF }
   | id { ID (Lexing.lexeme lexbuf) }
   | eof { EOF }

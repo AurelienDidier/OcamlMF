@@ -1,10 +1,15 @@
-open Ast
+open FormatST
+open File
+
+
 
 (** [parse s] parses [s] into an AST. *)
 let parse (s : string) : expr =
   let lexbuf = Lexing.from_string s in
   let ast = Parser.prog Lexer.read lexbuf in
   ast
+  let formatST = Parser.prog Lexer.read lexbuf in
+  formatST
 
 (** [typ] represents the type of an expression. *)
 type typ =

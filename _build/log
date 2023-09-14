@@ -1,9 +1,9 @@
-# dune exec test/main.exe
+# dune utop
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /home/user01/git/OcamlMF
 # Auto-detected concurrency: 4
-$ /home/user01/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_da6aac_output
+$ /home/user01/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_0b1b7b_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"

@@ -1,0 +1,270 @@
+
+type token = 
+  | TRUE
+  | TIMES
+  | THEN
+  | RPAREN
+  | PLUS
+  | LPAREN
+  | LET
+  | LEQ
+  | INT of (
+# 5 "other menhir example/calc-pretty/src/parser.mly"
+       (int)
+# 15 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+)
+  | IN
+  | IF
+  | ID of (
+# 6 "other menhir example/calc-pretty/src/parser.mly"
+       (string)
+# 22 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+)
+  | FALSE
+  | EQUALS
+  | EOF
+  | ELSE
+  | COMMA
+
+# 1 "other menhir example/calc-pretty/src/parser.mly"
+  
+open Ast
+
+# 34 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+
+let menhir_begin_marker =
+  0
+
+and (xv_prog, xv_expr) =
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 35 "other menhir example/calc-pretty/src/parser.mly"
+            _2
+# 43 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 35 "other menhir example/calc-pretty/src/parser.mly"
+   e
+# 47 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) ->
+    ((
+# 35 "other menhir example/calc-pretty/src/parser.mly"
+                 ( e )
+# 52 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_prog) : (
+# 30 "other menhir example/calc-pretty/src/parser.mly"
+       (Ast.expr)
+# 56 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 49 "other menhir example/calc-pretty/src/parser.mly"
+                  _3
+# 61 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 49 "other menhir example/calc-pretty/src/parser.mly"
+           e
+# 65 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 49 "other menhir example/calc-pretty/src/parser.mly"
+  _1
+# 69 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 49 "other menhir example/calc-pretty/src/parser.mly"
+                          (e)
+# 74 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 48 "other menhir example/calc-pretty/src/parser.mly"
+                                   _5
+# 79 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 48 "other menhir example/calc-pretty/src/parser.mly"
+                           e2
+# 83 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 48 "other menhir example/calc-pretty/src/parser.mly"
+                   _3
+# 87 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 48 "other menhir example/calc-pretty/src/parser.mly"
+           e1
+# 91 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) (
+# 48 "other menhir example/calc-pretty/src/parser.mly"
+  _1
+# 95 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 48 "other menhir example/calc-pretty/src/parser.mly"
+                                           (Pair (e1,e2) )
+# 100 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+                                         e3
+# 105 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e3_ : Lexing.position) (_endpos_e3_ : Lexing.position) (_startofs_e3_ : int) (_endofs_e3_ : int) (_loc_e3_ : Lexing.position * Lexing.position) (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+                                  _5
+# 109 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+                        e2
+# 113 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+                 _3
+# 117 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+       e1
+# 121 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+  _1
+# 125 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 47 "other menhir example/calc-pretty/src/parser.mly"
+                                                   ( If (e1, e2, e3) )
+# 130 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+                                       e2
+# 135 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+                                  _5
+# 139 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+                        e1
+# 143 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+               _3
+# 147 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+        x
+# 151 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : (
+# 6 "other menhir example/calc-pretty/src/parser.mly"
+       (string)
+# 155 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+  )) (_startpos_x_ : Lexing.position) (_endpos_x_ : Lexing.position) (_startofs_x_ : int) (_endofs_x_ : int) (_loc_x_ : Lexing.position * Lexing.position) (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+  _1
+# 159 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 46 "other menhir example/calc-pretty/src/parser.mly"
+                                                 ( Let (x, e1, e2) )
+# 164 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 45 "other menhir example/calc-pretty/src/parser.mly"
+                    e2
+# 169 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 45 "other menhir example/calc-pretty/src/parser.mly"
+             _2
+# 173 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 45 "other menhir example/calc-pretty/src/parser.mly"
+   e1
+# 177 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    (
+# 45 "other menhir example/calc-pretty/src/parser.mly"
+                              ( Binop (Add, e1, e2) )
+# 182 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 44 "other menhir example/calc-pretty/src/parser.mly"
+                     e2
+# 187 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 44 "other menhir example/calc-pretty/src/parser.mly"
+             _2
+# 191 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 44 "other menhir example/calc-pretty/src/parser.mly"
+   e1
+# 195 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    (
+# 44 "other menhir example/calc-pretty/src/parser.mly"
+                               ( Binop (Mult, e1, e2) )
+# 200 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 43 "other menhir example/calc-pretty/src/parser.mly"
+                   e2
+# 205 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 43 "other menhir example/calc-pretty/src/parser.mly"
+             _2
+# 209 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) (
+# 43 "other menhir example/calc-pretty/src/parser.mly"
+   e1
+# 213 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : 'tv_expr) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    (
+# 43 "other menhir example/calc-pretty/src/parser.mly"
+                             ( Binop (Leq, e1, e2) )
+# 218 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 42 "other menhir example/calc-pretty/src/parser.mly"
+  _1
+# 223 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 42 "other menhir example/calc-pretty/src/parser.mly"
+         ( Bool false )
+# 228 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 41 "other menhir example/calc-pretty/src/parser.mly"
+  _1
+# 233 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    (
+# 41 "other menhir example/calc-pretty/src/parser.mly"
+        ( Bool true )
+# 238 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 40 "other menhir example/calc-pretty/src/parser.mly"
+   x
+# 243 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : (
+# 6 "other menhir example/calc-pretty/src/parser.mly"
+       (string)
+# 247 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+  )) (_startpos_x_ : Lexing.position) (_endpos_x_ : Lexing.position) (_startofs_x_ : int) (_endofs_x_ : int) (_loc_x_ : Lexing.position * Lexing.position) ->
+    (
+# 40 "other menhir example/calc-pretty/src/parser.mly"
+          ( Var x )
+# 252 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  let _ = fun (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 39 "other menhir example/calc-pretty/src/parser.mly"
+   i
+# 257 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+   : (
+# 5 "other menhir example/calc-pretty/src/parser.mly"
+       (int)
+# 261 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+  )) (_startpos_i_ : Lexing.position) (_endpos_i_ : Lexing.position) (_startofs_i_ : int) (_endofs_i_ : int) (_loc_i_ : Lexing.position * Lexing.position) ->
+    (
+# 39 "other menhir example/calc-pretty/src/parser.mly"
+           ( Int i )
+# 266 "other menhir example/calc-pretty/src/parser__mock.ml.mock"
+     : 'tv_expr) in
+  ((let rec diverge() = diverge() in diverge()) : 'tv_prog * 'tv_expr)
+
+and menhir_end_marker =
+  0
