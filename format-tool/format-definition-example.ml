@@ -1,12 +1,6 @@
-pre "\n\t" : "{", "}"
-post "\n" : ";", "}"
+pre "\n" : "{", "}",";;"
+post "\n" : ";", "}", "="
 surround " " : EQUALS, PLUS
-child "\t" : LPAREN
+childIndent "\t" : (LPAREN, RPAREN), ("{", "}")
+selfIndent "\t" : (LPAREN, RPAREN), ("{", "}")
 
-expected outputs:
-
-
-a + b =
-	{
-	c + d
-	}
