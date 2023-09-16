@@ -1,8 +1,8 @@
 %{
-open FormatST
+open FormatRule
 %}
 
-%token <string> FORMATKIND
+%token <string> STRING
 %token POST
 %token PRE
 %token SURROUND
@@ -15,18 +15,21 @@ open FormatST
 %left INDENTSELF
 %left INDENTCHILD
 
-%type <string> expr
-
-%start <FormatST.expr> prog
-
+%start <FormatRule.table> main
 %%
 
-prog:
-	| e = expr; EOF { e };
+main:
+  | e = expr { Some e }
+  | EOF       { None   } ;
 
 expr:
-	| PRE; e2= FORMATKIND; COLON; e3 = string { Pre(e2, e3)}
-	| POST; e2= FORMATKIND; COLON; e3 = string { Post(e2, e3)}
-	| SURROUND; e2= FORMATKIND; COLON; e3 = string { Surround(e2, e3)}
-	| INDENTSELF; e2= FORMATKIND; COLON; e3 = string { IndentSelf(e2, e3)}	
-	| INDENTCHILD; e2= FORMATKIND; COLON; e3 = string { IndentChild(e2, e3) ;
+  | PRE; s=STRING; COLON; vl = list_fields; { Pre(s, vl)}
+  | POST; s=STRING; COLON; vl = list_fields; { Post(s, vl)}
+  | SURROUND; s=STRING; COLON; vl = list_fields; { Surround(s, vl)}
+  | INDENTSELF; s=STRING; COLON; vl = list_fields; { IdentSelf(s, vl)}	
+  | INDENTCHILD; s=STRING; COLON; vl = list_fields; { IndentChild(s, vl)}
+  | UNINDENTSELF; s=STRING; COLON; vl = list_fields; { UnIdentSelf(s, vl)}	
+  | UNINDENTCHILD; s=STRING; COLON; vl = list_fields; { UnIndentChild(s, vl)}
+  
+list_fields:
+    vl = separated_list(COMMA, value)         { vl } ;

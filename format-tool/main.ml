@@ -1,4 +1,4 @@
-open FormatST
+open FormatRule
 open File
 
 (** [parse s] parses [s] into an AST. *)
@@ -65,7 +65,7 @@ module Context : Context = struct
 end
 
 open Context
-0
+
 (** [typeof ctx e] is the type of [e] in context [ctx]. 
     Raises: [Failure] if [e] is not well typed in [ctx]. *)
 let rec typeof ctx = function
